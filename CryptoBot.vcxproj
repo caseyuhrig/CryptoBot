@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{e5dc928f-e142-4167-bd9e-4c2a7c3a9b08}</ProjectGuid>
+    <RootNamespace>CryptoBot</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Label="Vcpkg" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <VcpkgUseStatic>true</VcpkgUseStatic>
+    <VcpkgTriplet>x64-windows-static</VcpkgTriplet>
+  </PropertyGroup>
+  <PropertyGroup Label="Vcpkg" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <VcpkgUseStatic>true</VcpkgUseStatic>
+    <VcpkgTriplet>x64-windows-static</VcpkgTriplet>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_WIN32_WINNT=0x0A00;_CRT_SECURE_NO_WARNINGS;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>$(IntDir)$(TargetName)-new.pch</PrecompiledHeaderOutputFile>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <EnableParallelCodeGeneration>true</EnableParallelCodeGeneration>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>crypt32.lib;secur32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_WIN32_WINNT=0x0A00;_CRT_SECURE_NO_WARNINGS;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>$(IntDir)$(TargetName)-new.pch</PrecompiledHeaderOutputFile>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <EnableParallelCodeGeneration>true</EnableParallelCodeGeneration>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>crypt32.lib;secur32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="include\tao\pq.hpp" />
+    <ClInclude Include="include\tao\pq\connection.hpp" />
+    <ClInclude Include="include\tao\pq\connection_pool.hpp" />
+    <ClInclude Include="include\tao\pq\field.hpp" />
+    <ClInclude Include="include\tao\pq\internal\connection.hpp" />
+    <ClInclude Include="include\tao\pq\internal\demangle.hpp" />
+    <ClInclude Include="include\tao\pq\internal\dependent_false.hpp" />
+    <ClInclude Include="include\tao\pq\internal\endian.hpp" />
+    <ClInclude Include="include\tao\pq\internal\endian_gcc.hpp" />
+    <ClInclude Include="include\tao\pq\internal\endian_win.hpp" />
+    <ClInclude Include="include\tao\pq\internal\exclusive_scan.hpp" />
+    <ClInclude Include="include\tao\pq\internal\gen.hpp" />
+    <ClInclude Include="include\tao\pq\internal\is_bytea_parameter.hpp" />
+    <ClInclude Include="include\tao\pq\internal\parameter_binary_traits.hpp" />
+    <ClInclude Include="include\tao\pq\internal\parameter_text_traits.hpp" />
+    <ClInclude Include="include\tao\pq\internal\parameter_traits.hpp" />
+    <ClInclude Include="include\tao\pq\internal\parameter_traits_helper.hpp" />
+    <ClInclude Include="include\tao\pq\internal\pool.hpp" />
+    <ClInclude Include="include\tao\pq\internal\printf.hpp" />
+    <ClInclude Include="include\tao\pq\internal\strtox.hpp" />
+    <ClInclude Include="include\tao\pq\internal\transaction.hpp" />
+    <ClInclude Include="include\tao\pq\internal\unreachable.hpp" />
+    <ClInclude Include="include\tao\pq\isolation_level.hpp" />
+    <ClInclude Include="include\tao\pq\null.hpp" />
+    <ClInclude Include="include\tao\pq\parameter_traits.hpp" />
+    <ClInclude Include="include\tao\pq\result.hpp" />
+    <ClInclude Include="include\tao\pq\result_traits.hpp" />
+    <ClInclude Include="include\tao\pq\result_traits_optional.hpp" />
+    <ClInclude Include="include\tao\pq\result_traits_pair.hpp" />
+    <ClInclude Include="include\tao\pq\result_traits_tuple.hpp" />
+    <ClInclude Include="include\tao\pq\row.hpp" />
+    <ClInclude Include="include\tao\pq\span.hpp" />
+    <ClInclude Include="include\tao\pq\table_writer.hpp" />
+    <ClInclude Include="include\tao\pq\transaction.hpp" />
+    <ClInclude Include="src\Core.hpp" />
+    <ClInclude Include="src\CryptoAPI\Coinbase\Auth.hpp" />
+    <ClInclude Include="src\CryptoAPI\Base64.hpp" />
+    <ClInclude Include="src\CryptoAPI\Coinbase\CoinbaseEx.hpp" />
+    <ClInclude Include="src\CryptoAPI\Coinbase\Order.hpp" />
+    <ClInclude Include="src\CryptoAPI\Coinbase\TradingAccount.hpp" />
+    <ClInclude Include="src\CryptoAPI\Coin\TradingPair.hpp" />
+    <ClInclude Include="src\CryptoAPI\Coinbase\HttpClient.hpp" />
+    <ClInclude Include="src\CryptoAPI\MarketData\ask.hpp" />
+    <ClInclude Include="src\CryptoAPI\MarketData\bid.hpp" />
+    <ClInclude Include="src\CryptoAPI\MarketData\book.hpp" />
+    <ClInclude Include="src\CryptoAPI\MarketData\product.hpp" />
+    <ClInclude Include="src\CryptoAPI\MarketData\products.hpp" />
+    <ClInclude Include="src\CryptoAPI\MarketData\stats.hpp" />
+    <ClInclude Include="src\CryptoAPI\MarketData\ticker.hpp" />
+    <ClInclude Include="src\CryptoAPI\MarketData\trade.hpp" />
+    <ClInclude Include="src\CryptoAPI\PostgreSQL.hpp" />
+    <ClInclude Include="src\CryptoAPI\root_certificates.hpp" />
+    <ClInclude Include="src\CryptoAPI\CandleStickChart.hpp" />
+    <ClInclude Include="src\cu\common.hpp" />
+    <ClInclude Include="src\CryptoAPI\UI.hpp" />
+    <ClInclude Include="src\CryptoAPI\WebSocket.hpp" />
+    <ClInclude Include="src\FileUtils.hpp" />
+    <ClInclude Include="src\stdafx.hpp" />
+    <ClInclude Include="src\StringUtils.hpp" />
+    <ClInclude Include="src\VectorUtils.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\CryptoAPI\Bot\RulesEngine.hpp" />
+    <ClCompile Include="src\main.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="src\stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="src\tao\pq\field.cpp" />
+    <ClCompile Include="src\tao\pq\internal\connection.cpp" />
+    <ClCompile Include="src\tao\pq\internal\demangle.cpp" />
+    <ClCompile Include="src\tao\pq\internal\printf.cpp" />
+    <ClCompile Include="src\tao\pq\internal\strtox.cpp" />
+    <ClCompile Include="src\tao\pq\internal\transaction.cpp" />
+    <ClCompile Include="src\tao\pq\result.cpp" />
+    <ClCompile Include="src\tao\pq\result_traits.cpp" />
+    <ClCompile Include="src\tao\pq\row.cpp" />
+    <ClCompile Include="src\tao\pq\table_writer.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
